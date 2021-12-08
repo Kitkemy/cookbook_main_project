@@ -3,7 +3,7 @@ import json
 import pprint
 
 
-
+    
 class Meal:
     def __init__(self, meal_selection):
         self.meal_selection = meal_selection
@@ -138,9 +138,6 @@ class Ingredients:
             list.append(ingredients_list['meals'][i]['strIngredient'])
         return list
 
-category = Category()
-print(category.category_list)
-
 areas = Areas()
 print(areas.areas_list)
 
@@ -152,7 +149,7 @@ choice = "Seafood"
 
 if choice == "random":
     meal = Meal(choice)
-    
+    #test:
     print(meal.name)
     print('\n')
     print(meal.img_path)
@@ -164,6 +161,7 @@ if choice == "random":
     print(meal.area)
     print(meal.category)
 
+#looking meals by category
 elif choice in category.category_list:
     print(f'user choose option CATEGORY: {choice}')
     list_meals = category.get_meals_by_category(choice)
@@ -183,7 +181,7 @@ elif choice in category.category_list:
 #tworzenie posiłkow po area
 
 #dodac szukanie po area
-#dodac szukanie po kategoriach
+#dodac szukanie po kategoriach - DONE
 #szukanie po głownym skladniku
 
 #zaczac  flaska- zeby dane wpisane recznie wyswietlily sie na stronie
